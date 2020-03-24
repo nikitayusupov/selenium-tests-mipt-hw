@@ -8,3 +8,4 @@ def test_lectoriy_search_good(browser_is_opened):
     lectoriy_main_page.search("теория игр")
     search_results_page = SearchResultsPage(*browser_is_opened)
     assert search_results_page.results_found()
+    
