@@ -16,3 +16,4 @@ class MainPage:
         elem.clear()
         elem.send_keys(search_string)
         elem.send_keys(Keys.RETURN)
+        
