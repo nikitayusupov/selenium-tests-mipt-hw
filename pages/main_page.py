@@ -1,6 +1,6 @@
 from selenium.webdriver.common.keys import Keys
 from locators.main_page_locators import MainPageLocators
-from selenium.webdriver.support import expected_conditions
+from selenium.webdriver.support import expected_conditions as EC
 
 
 class MainPage:
@@ -12,8 +12,11 @@ class MainPage:
         self.locators = MainPageLocators()
 
     def search(self, search_string):
-        elem = self.wait.until(expected_conditions.presence_of_element_located(self.locators.SEARCH_INPUT))
+        elem = self.wait.until(EC.presence_of_element_located(self.locators.SEARCH_INPUT))
         elem.clear()
         elem.send_keys(search_string)
         elem.send_keys(Keys.RETURN)
-        
+
+    def get_cnt_courses(self):
+        elems = self.wait.until(EC.presence_of_all_elements_located(self.locators.COURSE))
+        return int(elems[1].text.split()[0])
