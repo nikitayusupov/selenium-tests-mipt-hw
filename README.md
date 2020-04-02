@@ -5,6 +5,11 @@ docker-compose build
 docker-compose run selenium
 ```
 
+# Ожидаемый результат:
+
+![alt text](https://github.com/nikitayusupov/selenium-tests-mipt-hw/blob/master/screen.png "screen")
+
+
 # Описание тестов:
 
 **Test case #1:** Есть результаты поиска по фразе "теория игр"
