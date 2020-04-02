@@ -1,3 +1,12 @@
+# Запуск:
+
+```
+docker-compose build
+docker-compose run selenium
+```
+
+# Описание тестов:
+
 **Test case #1:** Есть результаты поиска по фразе "теория игр"
 
 **Precondition:** Открыт браузер
